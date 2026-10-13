@@ -1,0 +1,27 @@
+# Twitter/X Data Collection
+twscrape==0.11.0
+
+# Data Processing
+pandas==2.1.4
+numpy==1.26.3
+
+# Apache Spark
+pyspark==3.5.1
+
+# Sentiment Analysis
+vaderSentiment==3.3.2
+nltk==3.8.1
+
+# Dashboard
+streamlit==1.31.0
+plotly==5.19.0
+
+# Hadoop/HDFS Integration
+hdfs==2.7.3
+
+# Logging
+python-dotenv==1.0.0
+
+# Utilities
+pyyaml==6.0.1
+requests==2.31.0

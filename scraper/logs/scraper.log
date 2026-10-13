@@ -1,0 +1,47 @@
+2026-09-21 15:50:13,065 - __main__ - INFO - Starting Twitter data collection
+2026-09-21 15:50:13,065 - __main__ - INFO - Loading accounts from pool
+2026-09-21 15:50:13,122 - __main__ - INFO - Collecting tweets for keyword: AI
+2026-09-21 15:50:13,123 - __main__ - ERROR - Error collecting tweets for AI: 'AccountsPool' object has no attribute 'search'
+2026-09-21 15:50:13,123 - __main__ - INFO - Collected 0 tweets for AI
+2026-09-21 15:50:13,123 - __main__ - INFO - Collecting tweets for keyword: ChatGPT
+2026-09-21 15:50:13,123 - __main__ - ERROR - Error collecting tweets for ChatGPT: 'AccountsPool' object has no attribute 'search'
+2026-09-21 15:50:13,123 - __main__ - INFO - Collected 0 tweets for ChatGPT
+2026-09-21 15:50:13,124 - __main__ - INFO - Collecting tweets for keyword: OpenAI
+2026-09-21 15:50:13,124 - __main__ - ERROR - Error collecting tweets for OpenAI: 'AccountsPool' object has no attribute 'search'
+2026-09-21 15:50:13,124 - __main__ - INFO - Collected 0 tweets for OpenAI
+2026-09-21 15:50:13,124 - __main__ - INFO - Collecting tweets for keyword: IPL
+2026-09-21 15:50:13,125 - __main__ - ERROR - Error collecting tweets for IPL: 'AccountsPool' object has no attribute 'search'
+2026-09-21 15:50:13,125 - __main__ - INFO - Collected 0 tweets for IPL
+2026-09-21 15:50:13,125 - __main__ - INFO - Collecting tweets for keyword: iPhone
+2026-09-21 15:50:13,125 - __main__ - ERROR - Error collecting tweets for iPhone: 'AccountsPool' object has no attribute 'search'
+2026-09-21 15:50:13,125 - __main__ - INFO - Collected 0 tweets for iPhone
+2026-09-21 15:50:13,125 - __main__ - INFO - Total unique tweets collected: 0
+2026-09-21 15:54:24,818 - __main__ - INFO - Starting Twitter data collection
+2026-09-21 15:54:24,818 - __main__ - INFO - Collecting tweets for keyword: AI
+2026-09-21 15:54:24,819 - __main__ - ERROR - Error collecting tweets for AI: module 'twscrape.api' has no attribute 'search'
+2026-09-21 15:54:24,819 - __main__ - INFO - Collected 0 tweets for AI
+2026-09-21 15:54:24,819 - __main__ - INFO - Collecting tweets for keyword: ChatGPT
+2026-09-21 15:54:24,819 - __main__ - ERROR - Error collecting tweets for ChatGPT: module 'twscrape.api' has no attribute 'search'
+2026-09-21 15:54:24,819 - __main__ - INFO - Collected 0 tweets for ChatGPT
+2026-09-21 15:54:24,819 - __main__ - INFO - Collecting tweets for keyword: OpenAI
+2026-09-21 15:54:24,819 - __main__ - ERROR - Error collecting tweets for OpenAI: module 'twscrape.api' has no attribute 'search'
+2026-09-21 15:54:24,820 - __main__ - INFO - Collected 0 tweets for OpenAI
+2026-09-21 15:54:24,820 - __main__ - INFO - Collecting tweets for keyword: IPL
+2026-09-21 15:54:24,820 - __main__ - ERROR - Error collecting tweets for IPL: module 'twscrape.api' has no attribute 'search'
+2026-09-21 15:54:24,821 - __main__ - INFO - Collected 0 tweets for IPL
+2026-09-21 15:54:24,821 - __main__ - INFO - Collecting tweets for keyword: iPhone
+2026-09-21 15:54:24,821 - __main__ - ERROR - Error collecting tweets for iPhone: module 'twscrape.api' has no attribute 'search'
+2026-09-21 15:54:24,821 - __main__ - INFO - Collected 0 tweets for iPhone
+2026-09-21 15:54:24,821 - __main__ - INFO - Total unique tweets collected: 0
+2026-09-21 15:56:10,740 - __main__ - INFO - Starting Twitter data collection
+2026-09-21 15:56:10,741 - __main__ - INFO - Collecting tweets for keyword: AI
+2026-09-21 15:56:10,768 - __main__ - INFO - Collected 0 tweets for AI
+2026-09-21 15:56:10,768 - __main__ - INFO - Collecting tweets for keyword: ChatGPT
+2026-09-21 15:56:10,780 - __main__ - INFO - Collected 0 tweets for ChatGPT
+2026-09-21 15:56:10,780 - __main__ - INFO - Collecting tweets for keyword: OpenAI
+2026-09-21 15:56:10,792 - __main__ - INFO - Collected 0 tweets for OpenAI
+2026-09-21 15:56:10,793 - __main__ - INFO - Collecting tweets for keyword: IPL
+2026-09-21 15:56:10,805 - __main__ - INFO - Collected 0 tweets for IPL
+2026-09-21 15:56:10,805 - __main__ - INFO - Collecting tweets for keyword: iPhone
+2026-09-21 15:56:10,816 - __main__ - INFO - Collected 0 tweets for iPhone
+2026-09-21 15:56:10,816 - __main__ - INFO - Total unique tweets collected: 0

@@ -1,0 +1,27 @@
+2026-09-21 15:25:18,969 - __main__ - INFO - Creating HDFS directories
+2026-09-21 15:25:19,148 - __main__ - ERROR - HDFS command failed: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2026-09-21 15:25:19,315 - __main__ - ERROR - HDFS command failed: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2026-09-21 15:25:19,316 - __main__ - INFO - Listing files in /
+2026-09-21 15:25:19,488 - __main__ - ERROR - HDFS command failed: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2026-09-21 15:25:19,489 - __main__ - INFO - Listing files in /twitter/raw
+2026-09-21 15:25:19,658 - __main__ - ERROR - HDFS command failed: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2026-09-21 15:25:19,658 - __main__ - INFO - Listing files in /twitter/processed
+2026-09-21 15:25:19,828 - __main__ - ERROR - HDFS command failed: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+
+2026-09-21 15:46:48,618 - __main__ - INFO - Creating HDFS directories
+2026-09-21 15:46:50,777 - __main__ - INFO - HDFS command success: hdfs dfs -mkdir -p /twitter/raw
+2026-09-21 15:46:53,264 - __main__ - INFO - HDFS command success: hdfs dfs -mkdir -p /twitter/processed
+2026-09-21 15:46:53,264 - __main__ - INFO - Listing files in /
+2026-09-21 15:47:17,084 - __main__ - INFO - Creating HDFS directories
+2026-09-21 15:47:18,880 - __main__ - INFO - HDFS command success: hdfs dfs -mkdir -p /twitter/raw
+2026-09-21 15:47:20,721 - __main__ - INFO - HDFS command success: hdfs dfs -mkdir -p /twitter/processed
+2026-09-21 15:47:20,721 - __main__ - INFO - Listing files in /
+2026-09-21 15:47:22,887 - __main__ - INFO - HDFS command success: hdfs dfs -ls /
+2026-09-21 15:47:22,887 - __main__ - INFO - Listing files in /twitter/raw
+2026-09-21 15:47:24,821 - __main__ - INFO - HDFS command success: hdfs dfs -ls /twitter/raw
+2026-09-21 15:47:24,821 - __main__ - INFO - Listing files in /twitter/processed
+2026-09-21 15:47:26,770 - __main__ - INFO - HDFS command success: hdfs dfs -ls /twitter/processed
