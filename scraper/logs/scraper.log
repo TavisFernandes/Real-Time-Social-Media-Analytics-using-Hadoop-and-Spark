@@ -45,3 +45,10 @@
 2026-09-21 15:56:10,805 - __main__ - INFO - Collecting tweets for keyword: iPhone
 2026-09-21 15:56:10,816 - __main__ - INFO - Collected 0 tweets for iPhone
 2026-09-21 15:56:10,816 - __main__ - INFO - Total unique tweets collected: 0
+2026-10-14 10:59:16,895 - collector - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-14 10:59:17,570 - collector - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=1&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1006)')))
+2026-10-14 10:59:17,571 - collector - INFO - Collected 0 posts for AI
+2026-10-14 10:59:46,780 - collector - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-14 10:59:46,781 - collector - INFO - Collected 2 posts for AI
+2026-10-14 11:00:59,515 - collector - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-14 11:00:59,515 - collector - INFO - Collected 1 posts for AI

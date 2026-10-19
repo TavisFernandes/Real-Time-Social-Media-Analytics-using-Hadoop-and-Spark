@@ -53,7 +53,8 @@ class SparkPreprocessor:
         
         return df
     
-    def clean_text(self, text):
+    @staticmethod
+    def clean_text(text):
         """Clean tweet text"""
         if text is None:
             return ""
@@ -80,7 +81,7 @@ class SparkPreprocessor:
         logger.info("Starting preprocessing")
         
         # Register UDF for text cleaning
-        clean_text_udf = udf(self.clean_text, StringType())
+        clean_text_udf = udf(SparkPreprocessor.clean_text, StringType())
         
         # Handle nulls
         df = df.na.fill({
@@ -88,8 +89,7 @@ class SparkPreprocessor:
             'username': 'unknown',
             'likes': 0,
             'retweets': 0,
-            'replies': 0,
-            'hashtags': []
+            'replies': 0
         })
         
         # Clean text

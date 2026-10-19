@@ -1,0 +1,10 @@
+.git
+.venv
+venv
+__pycache__
+*.py[cod]
+data
+logs
+docker/configs
+scraper/accounts.txt
+scraper/accounts.db

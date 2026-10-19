@@ -1,4 +1,6 @@
-version: '3.8'
+x-app-build: &app-build
+  context: ..
+  dockerfile: Dockerfile
 
 services:
   # HDFS Namenode
@@ -80,6 +82,60 @@ services:
       - "10000:10000"
     networks:
       - bigdata
+
+  pipeline:
+    image: bluesky-analytics:local
+    build: *app-build
+    command: ["python", "pipeline.py"]
+    environment:
+      PYTHONUNBUFFERED: "1"
+      HDFS_NAMENODE: http://namenode:9870
+    volumes:
+      - ../data:/app/data
+      - ../logs:/app/logs
+    depends_on:
+      - namenode
+      - datanode
+    networks:
+      - bigdata
+    restart: "no"
+
+  hive-init:
+    image: bde2020/hive:2.3.2-postgresql-metastore
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - >-
+        until beeline -u jdbc:hive2://hive-server:10000/default -e "SELECT 1" >/dev/null 2>&1; do sleep 5; done;
+        beeline -u jdbc:hive2://hive-server:10000/default -f /opt/project/create_tables.sql
+    volumes:
+      - ../hive/create_tables.sql:/opt/project/create_tables.sql:ro
+    depends_on:
+      pipeline:
+        condition: service_completed_successfully
+      hive-server:
+        condition: service_started
+    networks:
+      - bigdata
+    restart: "no"
+
+  dashboard:
+    image: bluesky-analytics:local
+    build: *app-build
+    command:
+      - streamlit
+      - run
+      - dashboard/app.py
+      - --server.address=0.0.0.0
+      - --server.port=8501
+    environment:
+      PYTHONUNBUFFERED: "1"
+    ports:
+      - "8501:8501"
+    volumes:
+      - ../data:/app/data
+    networks:
+      - bigdata
+    restart: unless-stopped
 
 volumes:
   hadoop_namenode:

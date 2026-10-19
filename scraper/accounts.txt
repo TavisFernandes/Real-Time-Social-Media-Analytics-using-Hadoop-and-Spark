@@ -1,1 +1,1 @@
-your_twitter_username:your_twitter_password
+# Not used: public Bluesky search does not require account credentials.

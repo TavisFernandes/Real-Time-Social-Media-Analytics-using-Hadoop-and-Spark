@@ -10,7 +10,7 @@ DROP TABLE IF EXISTS tweets;
 
 -- Create external table for raw tweets
 CREATE EXTERNAL TABLE IF NOT EXISTS tweets (
-    tweet_id BIGINT,
+    tweet_id STRING,
     created_at STRING,
     username STRING,
     text STRING,
@@ -28,7 +28,7 @@ TBLPROPERTIES ("skip.header.line.count"="1");
 -- Create external table for processed tweets with sentiment
 DROP TABLE IF EXISTS tweets_processed;
 CREATE EXTERNAL TABLE IF NOT EXISTS tweets_processed (
-    tweet_id BIGINT,
+    tweet_id STRING,
     created_at STRING,
     username STRING,
     text STRING,

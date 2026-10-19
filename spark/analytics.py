@@ -10,7 +10,7 @@ from datetime import datetime
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import (
     col, to_date, hour, count, avg, sum as _sum,
-    date_trunc, window, when, lit
+    date_trunc, window, when, lit, to_timestamp
 )
 
 # Add project root to path

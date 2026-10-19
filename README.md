@@ -1,13 +1,13 @@
-# Real-Time X (Twitter) Big Data Sentiment Analytics Platform
+# Real-Time Bluesky Big Data Sentiment Analytics Platform
 
-A production-quality academic project that collects live X/Twitter posts, stores data in Hadoop HDFS, analyzes using Hive and Spark, performs sentiment analysis, and visualizes results in a Streamlit dashboard.
+A project that collects real public Bluesky posts without account credentials, stores data in Hadoop HDFS, analyzes using Hive and Spark, performs sentiment analysis, and visualizes results in a Streamlit dashboard.
 
 ## Architecture
 
 ```
-X/Twitter
+Bluesky public search API
     ↓
-twscrape (Data Collection)
+requests (No login required)
     ↓
 JSONL (Raw Data)
     ↓
@@ -24,7 +24,7 @@ Streamlit Dashboard
 ## Tech Stack
 
 - **Python 3.11**
-- **twscrape** - Twitter/X data collection
+- **Bluesky public API** - Real public post search without account credentials
 - **Hadoop HDFS** - Distributed storage (Docker)
 - **Hive** - Data warehousing (Docker)
 - **Apache Spark** - Big data processing (Docker)
@@ -35,14 +35,14 @@ Streamlit Dashboard
 ## Project Structure
 
 ```
-twitter-bigdata/
+bluesky-bigdata/
 │
 ├── docker/
 │   ├── docker-compose.yml
 │   └── configs/
 │
 ├── scraper/
-│   ├── collector.py          # twscrape data collector
+│   ├── collector.py          # Public Bluesky API collector
 │   └── config.py            # Configuration settings
 │
 ├── data/
@@ -74,9 +74,21 @@ twitter-bigdata/
 
 1. **Docker Desktop** installed and running
 2. **Python 3.11+**
-3. **Twitter/X API credentials** (for twscrape)
+3. Internet access to `public.api.bsky.app` (no Bluesky account required)
 
 ## Setup Instructions
+
+### Run Everything with Docker
+
+From the project root, run:
+
+```bash
+docker compose -f docker/docker-compose.yml up --build
+```
+
+Compose builds the Python/Java application image, starts HDFS and Hive, runs the Bluesky collection and Spark pipeline, uploads results to HDFS, initializes the Hive tables, and starts the dashboard. Open `http://localhost:8501` for the dashboard. The first run may take several minutes while images download and Hadoop initializes.
+
+Data and logs persist in the project folders. To stop the services, press `Ctrl+C`; to stop and remove the containers later, run `docker compose -f docker/docker-compose.yml down`. The collector requires internet access to Bluesky's public API. If no posts can be fetched, the pipeline logs that condition and leaves the dashboard available without creating synthetic data.
 
 ### 1. Install Python Dependencies
 
@@ -84,21 +96,7 @@ twitter-bigdata/
 pip install -r requirements.txt
 ```
 
-### 2. Configure Twitter/X Accounts for twscrape
-
-twscrape requires Twitter accounts to collect data. Add accounts using:
-
-```bash
-# Add accounts interactively
-twscrape add_accounts
-
-# Or add from file
-twscrape add_accounts accounts.txt
-```
-
-Follow the prompts to authenticate each account.
-
-### 3. Start Docker Infrastructure
+### 2. Start Docker Infrastructure
 
 Navigate to the docker directory and start the services:
 
@@ -122,7 +120,7 @@ Check status:
 docker-compose ps
 ```
 
-### 4. Initialize HDFS Directories
+### 3. Initialize HDFS Directories
 
 ```bash
 cd ..
@@ -131,7 +129,7 @@ python hdfs/hdfs_manager.py
 
 This creates `/twitter/raw` and `/twitter/processed` directories in HDFS.
 
-### 5. Create Hive Tables
+### 4. Create Hive Tables
 
 Connect to Hive server and run the table creation script:
 
@@ -153,14 +151,14 @@ docker exec -it hive-server beeline -u jdbc:hive2://localhost:10000 -f hive/crea
 
 ## Running the Project
 
-### Step 1: Collect Twitter Data
+### Step 1: Collect Real Bluesky Data
 
 ```bash
 cd scraper
 python collector.py
 ```
 
-This collects tweets for configured keywords (AI, ChatGPT, OpenAI, IPL, iPhone) and saves to `data/raw/`.
+This searches Bluesky's public API for configured keywords (AI, ChatGPT, OpenAI, IPL, iPhone) and saves real public posts to `data/raw/`. No account credentials or generated sample data are used. X/Twitter's official API is a separate service and requires X developer credentials for search access.
 
 ### Step 2: Upload to HDFS
 
@@ -193,7 +191,7 @@ This applies VADER sentiment analysis and saves results to `data/exports/`.
 python analytics.py
 ```
 
-This generates time series aggregates (hourly/daily sentiment, tweet volume).
+This generates time series aggregates (hourly/daily sentiment, post volume).
 
 ### Step 6: Launch Dashboard
 
@@ -206,18 +204,31 @@ The dashboard will open at `http://localhost:8501`
 
 ## Dashboard Pages
 
-1. **Overview** - Total tweets, sentiment percentages, keyword count, recent activity
+1. **Overview** - Total posts, sentiment percentages, keyword count, recent activity
 2. **Sentiment** - Pie chart and bar chart of sentiment distribution
-3. **Trends** - Tweet volume over time, sentiment trends
+3. **Trends** - Post volume over time, sentiment trends
 4. **Hashtags** - Top hashtags and frequency analysis
-5. **Recent Tweets** - Searchable table of recent tweets with sentiment labels
+5. **Recent Posts** - Searchable table of recent posts with sentiment labels
+6. **Topic Forecasts** - A two-topic monthly comparison with ADF stationarity checks, ACF/PACF plots, AR/MA/ARMA/ARIMA/SARIMA forecasts, holdout errors, residual ACF, and Ljung-Box checks. ChatGPT, OpenAI, and iPhone also use archived text mentions to build longer topic samples; limited samples receive a clearly labeled baseline forecast.
+
+The dashboard reads Spark's nested JSON/CSV output folders and the local history archive from the project data directory, regardless of the directory used to launch Streamlit. **Reload and fetch latest posts** makes a short-timeout live search; results are saved locally and appear in Recent Posts and Trends. If the network blocks Bluesky's API, the dashboard stays usable with the newest posts already in the local archive. Forecasts describe the collected sample, not total Bluesky activity.
+
+### Build a Local History Archive
+
+With Docker and internet access available, run a one-time three-year backfill for all monitored topics:
+
+```bash
+docker compose -f docker/docker-compose.yml run --build --rm pipeline python scraper/collector.py --history-years 3
+```
+
+Use `--history-years 2` for a two-year archive. The collector stores up to 50 real posts per topic per week in `data/history/`. The dashboard loads this file locally, so the saved time series remains available without internet access on campus. Historical forecasts for ChatGPT, OpenAI, and iPhone include matching archived post text alongside directly searched posts; fit comparisons are shown when enough monthly data is available, with a labeled average baseline for sparse samples. Rebuild the dashboard after pulling code changes with `docker compose -f docker/docker-compose.yml up -d --build dashboard`.
 
 ## Configuration
 
 Edit `scraper/config.py` to customize:
 
 - **Keywords** - Add/remove search keywords
-- **Collection limits** - Max tweets per keyword
+- **Collection limits** - Max posts per keyword
 - **Output paths** - Data storage locations
 - **HDFS paths** - HDFS directory structure
 
@@ -230,14 +241,14 @@ docker exec -it hive-server beeline -u jdbc:hive2://localhost:10000 -f hive/anal
 ```
 
 Available queries:
-- Total tweets
-- Tweets by keyword
+- Total posts
+- Posts by keyword
 - Top hashtags
 - Most active users
 - Most active hour
-- Daily tweet count
+- Daily post count
 - Average likes by keyword
-- Top engagement tweets
+- Top engagement posts
 - Sentiment distribution
 - Sentiment by keyword
 - Sentiment over time
@@ -256,7 +267,7 @@ docker-compose down -v
 
 ## Data Flow
 
-1. **Collection**: twscrape collects tweets → JSONL files in `data/raw/`
+1. **Collection**: Bluesky public search API returns real posts → JSONL files in `data/raw/`
 2. **Storage**: JSONL files uploaded to HDFS `/twitter/raw/`
 3. **Preprocessing**: Spark reads from HDFS/local, cleans data → `data/processed/`
 4. **Sentiment Analysis**: VADER analyzes sentiment → `data/exports/`
@@ -296,12 +307,9 @@ Ensure Spark can connect to HDFS:
 docker exec spark-master spark-shell
 ```
 
-### twscrape Authentication
+### Bluesky API Connectivity
 
-Ensure accounts are properly authenticated:
-```bash
-twscrape accounts
-```
+The collector needs internet access to `public.api.bsky.app`. If collection fails, check the connection and try again; the API may also enforce request limits.
 
 ## Adding New Keywords
 
@@ -346,7 +354,7 @@ This is an academic project for educational purposes.
 
 ## Acknowledgments
 
-- twscrape library for Twitter data collection
+- Bluesky public API for real post data
 - VADER sentiment analysis
 - Apache Hadoop, Hive, and Spark communities
 - Streamlit for dashboard framework

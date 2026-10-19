@@ -25,3 +25,391 @@
 2026-09-21 15:47:24,821 - __main__ - INFO - HDFS command success: hdfs dfs -ls /twitter/raw
 2026-09-21 15:47:24,821 - __main__ - INFO - Listing files in /twitter/processed
 2026-09-21 15:47:26,770 - __main__ - INFO - HDFS command success: hdfs dfs -ls /twitter/processed
+2026-10-14 06:27:00,289 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-14 06:27:00,292 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-14 06:27:00,604 - __main__ - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-14 06:27:00,607 - __main__ - INFO - Collected 0 posts for AI
+2026-10-14 06:27:00,609 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-14 06:27:00,793 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-14 06:27:00,796 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-14 06:27:00,798 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-14 06:27:00,990 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-14 06:27:00,993 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-14 06:27:00,995 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-14 06:27:01,180 - __main__ - ERROR - Error collecting Bluesky posts for IPL: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-14 06:27:01,182 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-14 06:27:01,184 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-14 06:27:01,339 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: HTTPSConnectionPool(host='public.api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-14 06:27:01,341 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-14 06:27:01,343 - __main__ - INFO - Total unique posts collected: 0
+2026-10-15 16:10:10,915 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-15 16:10:10,917 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-15 16:10:11,039 - __main__ - ERROR - Error collecting Bluesky posts for AI: 403 Client Error: Forbidden for url: https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest
+2026-10-15 16:10:11,040 - __main__ - INFO - Collected 0 posts for AI
+2026-10-15 16:10:11,043 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-15 16:10:11,133 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: 403 Client Error: Forbidden for url: https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest
+2026-10-15 16:10:11,137 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-15 16:10:11,140 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-15 16:10:11,224 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: 403 Client Error: Forbidden for url: https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest
+2026-10-15 16:10:11,225 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-15 16:10:11,228 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-15 16:10:11,307 - __main__ - ERROR - Error collecting Bluesky posts for IPL: 403 Client Error: Forbidden for url: https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest
+2026-10-15 16:10:11,309 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-15 16:10:11,312 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-15 16:10:11,396 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: 403 Client Error: Forbidden for url: https://public.api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest
+2026-10-15 16:10:11,397 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-15 16:10:11,400 - __main__ - INFO - Total unique posts collected: 0
+2026-10-15 16:28:40,217 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-15 16:28:40,233 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-15 16:28:41,405 - __main__ - INFO - Collected 100 posts for AI
+2026-10-15 16:28:41,410 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-15 16:28:44,770 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=1&sort=latest&cursor=eyJzIjpbMTc5MjA3ODczNjAwMCwiZGlkOnBsYzpmdmlrNnpxN2MzdWRtZ25ta2NwZXJhZ2QiLCIzbXh3ZmdidmFoazJjIl19
+2026-10-15 16:28:44,772 - __main__ - INFO - Collected 99 posts for ChatGPT
+2026-10-15 16:28:44,774 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-15 16:28:46,708 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=20&sort=latest&cursor=eyJzIjpbMTc5MjA3ODUyNzAwMCwiZGlkOnBsYzpuYzd4dHdzeWJucmZ0MmtmcjNjY3pzM2YiLCIzbXh3ZmEybXV2cTJ5Il19
+2026-10-15 16:28:46,710 - __main__ - INFO - Collected 80 posts for OpenAI
+2026-10-15 16:28:46,713 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-15 16:28:48,266 - __main__ - ERROR - Error collecting Bluesky posts for IPL: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=IPL&limit=2&sort=latest&cursor=eyJzIjpbMTc5MTcxMDY0MDAwMCwiZGlkOnBsYzo3a2EyaGN3bm5rZGd1cnJ2b3V0ejRqYjMiLCIzbXhsb202bTRqMzJoIl19
+2026-10-15 16:28:48,268 - __main__ - INFO - Collected 98 posts for IPL
+2026-10-15 16:28:48,271 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-15 16:28:50,310 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=1&sort=latest&cursor=eyJzIjpbMTc5MjA3NzY1NDAwMCwiZGlkOnBsYzplY2x2M3Q1eGhxbW03cmpnMnBlbG51YmMiLCIzbXh3ZWZ6b3lvczJyIl19
+2026-10-15 16:28:50,311 - __main__ - INFO - Collected 99 posts for iPhone
+2026-10-15 16:28:50,315 - __main__ - INFO - Total unique posts collected: 476
+2026-10-15 16:28:50,352 - __main__ - INFO - Saved 476 posts to data/raw/tweets_20261015_162840.jsonl
+2026-10-15 16:28:56,065 - __main__ - INFO - Loading data from data/raw
+2026-10-15 16:29:04,126 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:29:04,128 - __main__ - INFO - Starting preprocessing
+2026-10-15 16:29:04,199 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:30:12,049 - __main__ - INFO - Loading data from data/raw
+2026-10-15 16:30:20,835 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:30:20,837 - __main__ - INFO - Starting preprocessing
+2026-10-15 16:30:20,963 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:30:43,853 - __main__ - INFO - Loading data from data/raw
+2026-10-15 16:30:52,658 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:30:52,660 - __main__ - INFO - Starting preprocessing
+2026-10-15 16:30:54,152 - __main__ - INFO - Preprocessing complete. Records: 476
+2026-10-15 16:30:54,154 - __main__ - INFO - Saving processed data to data/processed
+2026-10-15 16:30:59,850 - __main__ - INFO - Data saved successfully
+2026-10-15 16:31:00,261 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:31:18,783 - __main__ - INFO - Loading processed data from data/processed
+2026-10-15 16:31:28,091 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:31:28,095 - __main__ - INFO - Starting sentiment analysis
+2026-10-15 16:31:28,215 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:32:09,308 - __main__ - INFO - Loading processed data from data/processed
+2026-10-15 16:32:18,869 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:32:18,872 - __main__ - INFO - Starting sentiment analysis
+2026-10-15 16:32:19,453 - __main__ - INFO - Sentiment analysis complete
+2026-10-15 16:32:19,456 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-15 16:32:25,407 - __main__ - INFO - Data saved successfully
+2026-10-15 16:32:26,011 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:32:44,500 - __main__ - INFO - Starting analytics pipeline
+2026-10-15 16:32:44,502 - __main__ - INFO - Loading data from data/exports
+2026-10-15 16:32:56,219 - __main__ - INFO - Loaded 476 records
+2026-10-15 16:32:56,221 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-15 16:32:56,387 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-15 16:32:56,509 - __main__ - INFO - Generating tweet volume over time
+2026-10-15 16:32:56,656 - __main__ - INFO - Generating sentiment by keyword
+2026-10-15 16:32:56,794 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261015_163256
+2026-10-15 16:33:03,337 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:33:03,340 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261015_163256
+2026-10-15 16:33:06,234 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:33:06,237 - __main__ - INFO - Saving to data/processed/tweet_volume_20261015_163256
+2026-10-15 16:33:09,850 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:33:09,853 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261015_163256
+2026-10-15 16:33:12,746 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:33:12,749 - __main__ - INFO - Analytics pipeline complete
+2026-10-15 16:33:12,981 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:40:08,920 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-15 16:40:08,923 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-15 16:40:11,865 - __main__ - ERROR - Error collecting Bluesky posts for AI: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=AI&limit=3&sort=latest&cursor=eyJzIjpbMTc5MjA4MjI0NDAwMCwiZGlkOnBsYzo1cXR3bTJ2d3ZhbDN0NXVjZmN2bmlpaXYiLCIzbXh3aW90Z3ljZzI3Il19
+2026-10-15 16:40:11,867 - __main__ - INFO - Collected 97 posts for AI
+2026-10-15 16:40:11,870 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-15 16:40:13,676 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=1&sort=latest&cursor=eyJzIjpbMTc5MjA3OTM3NDAwMCwiZGlkOnBsYzpjejYza2JibWd0NXo0cG1ia3JuYnl4Y2EiLCIzbXh3ZnpjZ2U0YzJ2Il19
+2026-10-15 16:40:13,679 - __main__ - INFO - Collected 99 posts for ChatGPT
+2026-10-15 16:40:13,682 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-15 16:40:15,145 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=22&sort=latest&cursor=eyJzIjpbMTc5MjA3OTUyOTAwMCwiZGlkOnBsYzpzajNxN2JxNTJlanozb2FucG5rNmk0djIiLCIzbXh3ZzV3ZzNreDJmIl19
+2026-10-15 16:40:15,147 - __main__ - INFO - Collected 78 posts for OpenAI
+2026-10-15 16:40:15,150 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-15 16:40:16,669 - __main__ - ERROR - Error collecting Bluesky posts for IPL: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=IPL&limit=2&sort=latest&cursor=eyJzIjpbMTc5MTcxMDY0MDAwMCwiZGlkOnBsYzo3a2EyaGN3bm5rZGd1cnJ2b3V0ejRqYjMiLCIzbXhsb202bTRqMzJoIl19
+2026-10-15 16:40:16,671 - __main__ - INFO - Collected 98 posts for IPL
+2026-10-15 16:40:16,674 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-15 16:40:18,548 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=1&sort=latest&cursor=eyJzIjpbMTc5MjA3ODcyNTAwMCwiZGlkOnBsYzprYzc2cHo1N3gzc3J2Z2VmeWNtc3IycmIiLCIzbXh3aTVlZ3p0YmIyIl19
+2026-10-15 16:40:18,549 - __main__ - INFO - Collected 99 posts for iPhone
+2026-10-15 16:40:18,552 - __main__ - INFO - Total unique posts collected: 471
+2026-10-15 16:40:18,591 - __main__ - INFO - Saved 471 posts to data/raw/tweets_20261015_164008.jsonl
+2026-10-15 16:40:23,953 - __main__ - INFO - Loading data from data/raw
+2026-10-15 16:40:32,162 - __main__ - INFO - Loaded 947 records
+2026-10-15 16:40:32,164 - __main__ - INFO - Starting preprocessing
+2026-10-15 16:40:33,944 - __main__ - INFO - Preprocessing complete. Records: 639
+2026-10-15 16:40:33,947 - __main__ - INFO - Saving processed data to data/processed
+2026-10-15 16:40:43,092 - __main__ - INFO - Data saved successfully
+2026-10-15 16:40:43,738 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:40:49,596 - __main__ - INFO - Loading processed data from data/processed
+2026-10-15 16:40:55,736 - __main__ - INFO - Loaded 639 records
+2026-10-15 16:40:55,738 - __main__ - INFO - Starting sentiment analysis
+2026-10-15 16:40:55,996 - __main__ - INFO - Sentiment analysis complete
+2026-10-15 16:40:55,998 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-15 16:41:00,148 - __main__ - INFO - Data saved successfully
+2026-10-15 16:41:00,635 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 16:41:06,861 - __main__ - INFO - Starting analytics pipeline
+2026-10-15 16:41:06,864 - __main__ - INFO - Loading data from data/exports
+2026-10-15 16:41:15,450 - __main__ - INFO - Loaded 639 records
+2026-10-15 16:41:15,452 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-15 16:41:15,578 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-15 16:41:15,648 - __main__ - INFO - Generating tweet volume over time
+2026-10-15 16:41:15,701 - __main__ - INFO - Generating sentiment by keyword
+2026-10-15 16:41:15,749 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261015_164115
+2026-10-15 16:41:19,905 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:41:19,908 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261015_164115
+2026-10-15 16:41:21,972 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:41:21,974 - __main__ - INFO - Saving to data/processed/tweet_volume_20261015_164115
+2026-10-15 16:41:23,658 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:41:23,659 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261015_164115
+2026-10-15 16:41:25,094 - __main__ - INFO - CSV saved successfully
+2026-10-15 16:41:25,095 - __main__ - INFO - Analytics pipeline complete
+2026-10-15 16:41:25,310 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-15 17:16:21,398 - __main__ - INFO - Backfilling 3 years for topics: AI, IPL
+2026-10-15 17:21:26,229 - __main__ - INFO - Saved 13472 historical posts to data/history/bluesky_history_20231016_20261015.jsonl
+2026-10-15 17:23:51,024 - __main__ - INFO - Backfilling 3 years for topics: AI, IPL
+2026-10-15 17:28:57,333 - __main__ - INFO - Saved 12822 historical posts to data/history/bluesky_history_20231016_20261015.jsonl
+2026-10-16 02:32:43,925 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-16 02:32:43,926 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-16 02:32:55,609 - __main__ - ERROR - Error collecting Bluesky posts for AI: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=AI&limit=4&sort=latest&cursor=eyJzIjpbMTc5MjExNzc0MzAwMCwiZGlkOnBsYzplaXk1MnQ0Mmppdmp6ZzMyYmZ2bG82em8iLCIzbXh4anFya3FkYzJkIl19
+2026-10-16 02:32:55,611 - __main__ - INFO - Collected 96 posts for AI
+2026-10-16 02:32:55,613 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-16 02:33:06,566 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=2&sort=latest&cursor=eyJzIjpbMTc5MjExMTY5OTAwMCwiZGlkOnBsYzpjcHIzNWlyYXVoenJhbHlya2pvMmpvZTMiLCIzbXh4ZTRvaGd4NDJ4Il19
+2026-10-16 02:33:06,569 - __main__ - INFO - Collected 98 posts for ChatGPT
+2026-10-16 02:33:06,571 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-16 02:33:18,806 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=19&sort=latest&cursor=eyJzIjpbMTc5MjExMDc3MDAwMCwiZGlkOnBsYzp4YmluZDNrd2Rvc3hiMndzZnp2dnZrdDIiLCIzbXh4ZGF4cmVuMjJ3Il19
+2026-10-16 02:33:18,807 - __main__ - INFO - Collected 81 posts for OpenAI
+2026-10-16 02:33:18,809 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-16 02:33:29,906 - __main__ - ERROR - Error collecting Bluesky posts for IPL: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=IPL&limit=2&sort=latest&cursor=eyJzIjpbMTc5MTc2MDg5MTAwMCwiZGlkOnBsYzpoaXFkN203YTIyYnZycmp6Y3FzNWZybnUiLCIzbXhuNWZzdWhqaDJxIl19
+2026-10-16 02:33:29,907 - __main__ - INFO - Collected 98 posts for IPL
+2026-10-16 02:33:29,908 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-16 02:33:40,375 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: 403 Client Error: Forbidden for url: https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=1&sort=latest&cursor=eyJzIjpbMTc5MjExMDYxMzAwMCwiZGlkOnBsYzp2bG11eWluaGFzcTY0aWVib2hsbDYydnUiLCIzbXh4ZDRjNmI1MjI1Il19
+2026-10-16 02:33:40,377 - __main__ - INFO - Collected 99 posts for iPhone
+2026-10-16 02:33:40,378 - __main__ - INFO - Total unique posts collected: 472
+2026-10-16 02:33:40,413 - __main__ - INFO - Saved 472 posts to data/raw/tweets_20261016_023243.jsonl
+2026-10-16 02:33:45,057 - __main__ - INFO - Loading data from data/raw
+2026-10-16 02:33:48,989 - __main__ - INFO - Loaded 1419 records
+2026-10-16 02:33:48,991 - __main__ - INFO - Starting preprocessing
+2026-10-16 02:33:49,971 - __main__ - INFO - Preprocessing complete. Records: 1020
+2026-10-16 02:33:49,973 - __main__ - INFO - Saving processed data to data/processed
+2026-10-16 02:33:53,184 - __main__ - INFO - Data saved successfully
+2026-10-16 02:33:53,962 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 02:33:56,717 - __main__ - INFO - Loading processed data from data/processed
+2026-10-16 02:34:00,158 - __main__ - INFO - Loaded 1020 records
+2026-10-16 02:34:00,160 - __main__ - INFO - Starting sentiment analysis
+2026-10-16 02:34:00,346 - __main__ - INFO - Sentiment analysis complete
+2026-10-16 02:34:00,347 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-16 02:34:02,396 - __main__ - INFO - Data saved successfully
+2026-10-16 02:34:03,192 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 02:34:06,010 - __main__ - INFO - Starting analytics pipeline
+2026-10-16 02:34:06,011 - __main__ - INFO - Loading data from data/exports
+2026-10-16 02:34:09,845 - __main__ - INFO - Loaded 1020 records
+2026-10-16 02:34:09,847 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-16 02:34:09,978 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-16 02:34:10,055 - __main__ - INFO - Generating tweet volume over time
+2026-10-16 02:34:10,110 - __main__ - INFO - Generating sentiment by keyword
+2026-10-16 02:34:10,160 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261016_023410
+2026-10-16 02:34:12,615 - __main__ - INFO - CSV saved successfully
+2026-10-16 02:34:12,616 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261016_023410
+2026-10-16 02:34:13,692 - __main__ - INFO - CSV saved successfully
+2026-10-16 02:34:13,694 - __main__ - INFO - Saving to data/processed/tweet_volume_20261016_023410
+2026-10-16 02:34:14,926 - __main__ - INFO - CSV saved successfully
+2026-10-16 02:34:14,927 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261016_023410
+2026-10-16 02:34:15,878 - __main__ - INFO - CSV saved successfully
+2026-10-16 02:34:15,879 - __main__ - INFO - Analytics pipeline complete
+2026-10-16 02:34:16,070 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 04:24:54,477 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-16 04:24:54,479 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-16 04:25:04,088 - __main__ - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 04:25:04,089 - __main__ - INFO - Collected 0 posts for AI
+2026-10-16 04:25:04,090 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-16 04:25:13,272 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 04:25:13,274 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-16 04:25:13,275 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-16 04:25:22,449 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 04:25:22,450 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-16 04:25:22,450 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-16 04:25:31,651 - __main__ - ERROR - Error collecting Bluesky posts for IPL: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 04:25:31,652 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-16 04:25:31,652 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-16 04:25:40,649 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 04:25:40,651 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-16 04:25:40,651 - __main__ - INFO - Total unique posts collected: 0
+2026-10-16 04:25:45,827 - __main__ - INFO - Loading data from data/raw
+2026-10-16 04:25:50,870 - __main__ - INFO - Loaded 1419 records
+2026-10-16 04:25:50,872 - __main__ - INFO - Starting preprocessing
+2026-10-16 04:25:51,838 - __main__ - INFO - Preprocessing complete. Records: 1020
+2026-10-16 04:25:51,840 - __main__ - INFO - Saving processed data to data/processed
+2026-10-16 04:25:55,450 - __main__ - INFO - Data saved successfully
+2026-10-16 04:25:56,211 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 04:25:59,361 - __main__ - INFO - Loading processed data from data/processed
+2026-10-16 04:26:03,693 - __main__ - INFO - Loaded 1020 records
+2026-10-16 04:26:03,694 - __main__ - INFO - Starting sentiment analysis
+2026-10-16 04:26:03,889 - __main__ - INFO - Sentiment analysis complete
+2026-10-16 04:26:03,890 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-16 04:26:05,666 - __main__ - INFO - Data saved successfully
+2026-10-16 04:26:06,453 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 04:26:09,374 - __main__ - INFO - Starting analytics pipeline
+2026-10-16 04:26:09,375 - __main__ - INFO - Loading data from data/exports
+2026-10-16 04:26:13,898 - __main__ - INFO - Loaded 1020 records
+2026-10-16 04:26:13,900 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-16 04:26:13,994 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-16 04:26:14,052 - __main__ - INFO - Generating tweet volume over time
+2026-10-16 04:26:14,101 - __main__ - INFO - Generating sentiment by keyword
+2026-10-16 04:26:14,145 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261016_042614
+2026-10-16 04:26:16,067 - __main__ - INFO - CSV saved successfully
+2026-10-16 04:26:16,068 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261016_042614
+2026-10-16 04:26:17,181 - __main__ - INFO - CSV saved successfully
+2026-10-16 04:26:17,182 - __main__ - INFO - Saving to data/processed/tweet_volume_20261016_042614
+2026-10-16 04:26:18,379 - __main__ - INFO - CSV saved successfully
+2026-10-16 04:26:18,380 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261016_042614
+2026-10-16 04:26:19,297 - __main__ - INFO - CSV saved successfully
+2026-10-16 04:26:19,298 - __main__ - INFO - Analytics pipeline complete
+2026-10-16 04:26:19,767 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:04:20,146 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-16 05:04:20,148 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-16 05:04:28,980 - __main__ - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:04:28,982 - __main__ - INFO - Collected 0 posts for AI
+2026-10-16 05:04:28,982 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-16 05:04:37,940 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:04:37,941 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-16 05:04:37,942 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-16 05:04:46,665 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:04:46,666 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-16 05:04:46,666 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-16 05:04:55,519 - __main__ - ERROR - Error collecting Bluesky posts for IPL: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:04:55,520 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-16 05:04:55,521 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-16 05:05:04,278 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:05:04,280 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-16 05:05:04,280 - __main__ - INFO - Total unique posts collected: 0
+2026-10-16 05:05:08,583 - __main__ - INFO - Loading data from data/raw
+2026-10-16 05:05:14,809 - __main__ - INFO - Loaded 1419 records
+2026-10-16 05:05:14,811 - __main__ - INFO - Starting preprocessing
+2026-10-16 05:05:16,171 - __main__ - INFO - Preprocessing complete. Records: 1020
+2026-10-16 05:05:16,173 - __main__ - INFO - Saving processed data to data/processed
+2026-10-16 05:05:20,999 - __main__ - INFO - Data saved successfully
+2026-10-16 05:05:21,568 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:05:26,179 - __main__ - INFO - Loading processed data from data/processed
+2026-10-16 05:05:31,797 - __main__ - INFO - Loaded 1020 records
+2026-10-16 05:05:31,798 - __main__ - INFO - Starting sentiment analysis
+2026-10-16 05:05:32,080 - __main__ - INFO - Sentiment analysis complete
+2026-10-16 05:05:32,081 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-16 05:05:35,098 - __main__ - INFO - Data saved successfully
+2026-10-16 05:05:35,776 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:05:40,137 - __main__ - INFO - Starting analytics pipeline
+2026-10-16 05:05:40,139 - __main__ - INFO - Loading data from data/exports
+2026-10-16 05:05:46,101 - __main__ - INFO - Loaded 1020 records
+2026-10-16 05:05:46,103 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-16 05:05:46,233 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-16 05:05:46,315 - __main__ - INFO - Generating tweet volume over time
+2026-10-16 05:05:46,379 - __main__ - INFO - Generating sentiment by keyword
+2026-10-16 05:05:46,436 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261016_050546
+2026-10-16 05:05:49,180 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:05:49,182 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261016_050546
+2026-10-16 05:05:51,912 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:05:51,914 - __main__ - INFO - Saving to data/processed/tweet_volume_20261016_050546
+2026-10-16 05:05:53,987 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:05:53,989 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261016_050546
+2026-10-16 05:05:55,504 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:05:55,505 - __main__ - INFO - Analytics pipeline complete
+2026-10-16 05:05:55,914 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:07:28,788 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-16 05:07:28,789 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-16 05:07:37,615 - __main__ - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:07:37,616 - __main__ - INFO - Collected 0 posts for AI
+2026-10-16 05:07:37,617 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-16 05:07:46,357 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:07:46,358 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-16 05:07:46,358 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-16 05:07:55,125 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:07:55,126 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-16 05:07:55,127 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-16 05:08:03,743 - __main__ - ERROR - Error collecting Bluesky posts for IPL: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:08:03,744 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-16 05:08:03,744 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-16 05:08:12,440 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-16 05:08:12,441 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-16 05:08:12,442 - __main__ - INFO - Total unique posts collected: 0
+2026-10-16 05:08:16,782 - __main__ - INFO - Loading data from data/raw
+2026-10-16 05:08:23,382 - __main__ - INFO - Loaded 1419 records
+2026-10-16 05:08:23,384 - __main__ - INFO - Starting preprocessing
+2026-10-16 05:08:25,348 - __main__ - INFO - Preprocessing complete. Records: 1020
+2026-10-16 05:08:25,351 - __main__ - INFO - Saving processed data to data/processed
+2026-10-16 05:08:30,512 - __main__ - INFO - Data saved successfully
+2026-10-16 05:08:31,063 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:08:35,733 - __main__ - INFO - Loading processed data from data/processed
+2026-10-16 05:08:41,730 - __main__ - INFO - Loaded 1020 records
+2026-10-16 05:08:41,731 - __main__ - INFO - Starting sentiment analysis
+2026-10-16 05:08:42,097 - __main__ - INFO - Sentiment analysis complete
+2026-10-16 05:08:42,099 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-16 05:08:45,544 - __main__ - INFO - Data saved successfully
+2026-10-16 05:08:46,183 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-16 05:08:51,291 - __main__ - INFO - Starting analytics pipeline
+2026-10-16 05:08:51,293 - __main__ - INFO - Loading data from data/exports
+2026-10-16 05:08:58,727 - __main__ - INFO - Loaded 1020 records
+2026-10-16 05:08:58,728 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-16 05:08:58,845 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-16 05:08:58,922 - __main__ - INFO - Generating tweet volume over time
+2026-10-16 05:08:58,985 - __main__ - INFO - Generating sentiment by keyword
+2026-10-16 05:08:59,034 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261016_050859
+2026-10-16 05:09:03,867 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:09:03,869 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261016_050859
+2026-10-16 05:09:05,898 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:09:05,899 - __main__ - INFO - Saving to data/processed/tweet_volume_20261016_050859
+2026-10-16 05:09:07,789 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:09:07,790 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261016_050859
+2026-10-16 05:09:09,409 - __main__ - INFO - CSV saved successfully
+2026-10-16 05:09:09,410 - __main__ - INFO - Analytics pipeline complete
+2026-10-16 05:09:09,579 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-19 06:25:52,136 - __main__ - INFO - Starting Bluesky public-post collection
+2026-10-19 06:25:52,137 - __main__ - INFO - Collecting Bluesky posts for keyword: AI
+2026-10-19 06:26:00,691 - __main__ - ERROR - Error collecting Bluesky posts for AI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=AI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-19 06:26:00,692 - __main__ - INFO - Collected 0 posts for AI
+2026-10-19 06:26:00,693 - __main__ - INFO - Collecting Bluesky posts for keyword: ChatGPT
+2026-10-19 06:26:09,228 - __main__ - ERROR - Error collecting Bluesky posts for ChatGPT: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=ChatGPT&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-19 06:26:09,229 - __main__ - INFO - Collected 0 posts for ChatGPT
+2026-10-19 06:26:09,229 - __main__ - INFO - Collecting Bluesky posts for keyword: OpenAI
+2026-10-19 06:26:17,836 - __main__ - ERROR - Error collecting Bluesky posts for OpenAI: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=OpenAI&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-19 06:26:17,837 - __main__ - INFO - Collected 0 posts for OpenAI
+2026-10-19 06:26:17,838 - __main__ - INFO - Collecting Bluesky posts for keyword: IPL
+2026-10-19 06:26:26,381 - __main__ - ERROR - Error collecting Bluesky posts for IPL: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=IPL&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-19 06:26:26,382 - __main__ - INFO - Collected 0 posts for IPL
+2026-10-19 06:26:26,382 - __main__ - INFO - Collecting Bluesky posts for keyword: iPhone
+2026-10-19 06:26:35,083 - __main__ - ERROR - Error collecting Bluesky posts for iPhone: HTTPSConnectionPool(host='api.bsky.app', port=443): Max retries exceeded with url: /xrpc/app.bsky.feed.searchPosts?q=iPhone&limit=100&sort=latest (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1016)')))
+2026-10-19 06:26:35,084 - __main__ - INFO - Collected 0 posts for iPhone
+2026-10-19 06:26:35,085 - __main__ - INFO - Total unique posts collected: 0
+2026-10-19 06:26:40,052 - __main__ - INFO - Loading data from data/raw
+2026-10-19 06:26:45,054 - __main__ - INFO - Loaded 1419 records
+2026-10-19 06:26:45,056 - __main__ - INFO - Starting preprocessing
+2026-10-19 06:26:46,332 - __main__ - INFO - Preprocessing complete. Records: 1020
+2026-10-19 06:26:46,333 - __main__ - INFO - Saving processed data to data/processed
+2026-10-19 06:26:51,171 - __main__ - INFO - Data saved successfully
+2026-10-19 06:26:51,890 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-19 06:26:57,293 - __main__ - INFO - Loading processed data from data/processed
+2026-10-19 06:27:06,992 - __main__ - INFO - Loaded 1020 records
+2026-10-19 06:27:06,994 - __main__ - INFO - Starting sentiment analysis
+2026-10-19 06:27:07,293 - __main__ - INFO - Sentiment analysis complete
+2026-10-19 06:27:07,295 - __main__ - INFO - Saving data with sentiment to data/exports
+2026-10-19 06:27:10,560 - __main__ - INFO - Data saved successfully
+2026-10-19 06:27:11,235 - py4j.clientserver - INFO - Closing down clientserver connection
+2026-10-19 06:27:17,132 - __main__ - INFO - Starting analytics pipeline
+2026-10-19 06:27:17,134 - __main__ - INFO - Loading data from data/exports
+2026-10-19 06:27:24,342 - __main__ - INFO - Loaded 1020 records
+2026-10-19 06:27:24,344 - __main__ - INFO - Generating hourly sentiment aggregates
+2026-10-19 06:27:24,529 - __main__ - INFO - Generating daily sentiment aggregates
+2026-10-19 06:27:24,642 - __main__ - INFO - Generating tweet volume over time
+2026-10-19 06:27:24,723 - __main__ - INFO - Generating sentiment by keyword
+2026-10-19 06:27:24,794 - __main__ - INFO - Saving to data/processed/hourly_sentiment_20261019_062724
+2026-10-19 06:27:28,363 - __main__ - INFO - CSV saved successfully
+2026-10-19 06:27:28,367 - __main__ - INFO - Saving to data/processed/daily_sentiment_20261019_062724
+2026-10-19 06:27:30,100 - __main__ - INFO - CSV saved successfully
+2026-10-19 06:27:30,103 - __main__ - INFO - Saving to data/processed/tweet_volume_20261019_062724
+2026-10-19 06:27:31,948 - __main__ - INFO - CSV saved successfully
+2026-10-19 06:27:31,950 - __main__ - INFO - Saving to data/processed/keyword_sentiment_20261019_062724
+2026-10-19 06:27:34,249 - __main__ - INFO - CSV saved successfully
+2026-10-19 06:27:34,251 - __main__ - INFO - Analytics pipeline complete
+2026-10-19 06:27:34,467 - py4j.clientserver - INFO - Closing down clientserver connection

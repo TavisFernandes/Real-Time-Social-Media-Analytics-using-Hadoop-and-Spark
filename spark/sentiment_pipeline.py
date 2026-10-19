@@ -12,6 +12,8 @@ from pyspark.sql.types import StringType, DoubleType
 
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 
+VADER_ANALYZER = SentimentIntensityAnalyzer()
+
 # Add project root to path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -41,14 +43,14 @@ class SentimentAnalyzer:
             .config("spark.sql.legacy.timeParserPolicy", "LEGACY") \
             .getOrCreate()
         self.spark.sparkContext.setLogLevel("WARN")
-        self.vader = SentimentIntensityAnalyzer()
         
-    def get_sentiment(self, text):
+    @staticmethod
+    def get_sentiment(text):
         """Get sentiment label from text using VADER"""
         if not text or text == "":
             return "Neutral", 0.0
             
-        scores = self.vader.polarity_scores(text)
+        scores = VADER_ANALYZER.polarity_scores(text)
         compound_score = scores['compound']
         
         if compound_score >= 0.05:
@@ -64,11 +66,11 @@ class SentimentAnalyzer:
         
         # Register UDFs
         sentiment_label_udf = udf(
-            lambda x: self.get_sentiment(x)[0], 
+            lambda x: SentimentAnalyzer.get_sentiment(x)[0],
             StringType()
         )
         sentiment_score_udf = udf(
-            lambda x: self.get_sentiment(x)[1], 
+            lambda x: SentimentAnalyzer.get_sentiment(x)[1],
             DoubleType()
         )
         
